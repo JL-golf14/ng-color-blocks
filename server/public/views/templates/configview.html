@@ -1,4 +1,5 @@
 <div class="row">
+  <h2>highScore</h2><h3>Jeremy Leif @    463547865234671400</h3>
   <h1>Settings</h1>
 
   Pro Mode To Do: UI to add colors to the game.
@@ -6,16 +7,16 @@
 
 <h2>Add a new Color</h2>
 <input ng-model="settings.newColor" value="settings.colors"> <button ng-click="settings.addNewColor()">Add Color</button>
-{{settings.colors}}
+<!-- {{settings.colors}} -->
 <br>
 <br>
 <table>
 <th>Edit The Colors</th>
-<tr ng-repeat="color in settings.colors">
+<tr ng-repeat="color in settings.colors track by $index">
   <td>
 
-  <input value="{{color}}" >
-  </td>
+  <input ng-model='color' value="{{color}}"> {{$index}}<button ng-click="settings.remove(index,color)">edit</button>
+</td>
 
 </tr>
 </table>
