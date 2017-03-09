@@ -1,8 +1,11 @@
 <div class="row" id="gameview">
-  <h1>{{game.colorPrompt}}</h1>
+
+  <h1 id="score">score:{{game.highScore}}</h1>
+
+  <h1 id="guessColor">{{game.colorPrompt}}</h1>
 
   <h3 ng-if="game.messageText != ''" class="alert alert-warning">{{game.messageText}}</h3>
-<h1>{{game.highScore}}</h1>
+
 
 
   <div id="button-container">
